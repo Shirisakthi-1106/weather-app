@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#feb47b /* Light background color for the entire page */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limit the width for better alignment */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.weather_container {
+    width: 100%;
+}
+
+.weather_blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.temperature_block, .time_location_block, .condition_block, .icon_block, .windspeed-block, .error_message_block {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly more transparent shadow */
+    flex: 1;
+    min-width: 250px; /* Minimum width for each block */
+    max-width: 300px; /* Maximum width for each block */
+    text-align: center;
+}
+
+.section_heading {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Default color, can be overridden for each heading */
+}
+
+.windspeed-heading {
+    color: #fbc02d;
+}
+
+.temperature_heading {
+    color: #ff6f61; /* Coral color for temperature */
+}
+
+.time_location_heading {
+    color: #4db6ac; /* Teal color for time & location */
+}
+
+.condition_heading {
+    color: #fbc02d; /* Amber color for condition */
+}
+
+.icon_heading {
+    color: #7b1fa2; /* Deep purple color for icon */
+}
+
+.temperature_block .temp, .windspeed-block p, .time_location_block .location, .time_location_block .date, .condition_block .condition {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.weather_icon {
+    width: 100px;
+    height: 100px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.search_area {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.search_button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #feb47b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.search_button:hover {
+    background-color: #ff7e5f;
+}
+
+/* Error Message Block Styling */
+.error_message_block {
+    display: none; /* Hidden by default */
+}
+
+.error_message {
+    color: #d32f2f; /* Red color for error */
+    font-size: 1.2em;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .section_heading {
+        font-size: 1.2em;
+    }
+
+    .temperature_block .temp, .windspeed-block p, .time_location_block .location, .time_location_block .date, .condition_block .condition {
+        font-size: 1em;
+    }
+
+    .weather_icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section_heading {
+        font-size: 1em;
+    }
+
+    .temperature_block .temp, .time_location_block .location, .time_location_block .date, .condition_block .condition {
+        font-size: 0.9em;
+    }
+
+    .weather_icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .weather_blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+}

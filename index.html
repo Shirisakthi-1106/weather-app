@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather_container">
+            
+            <div class="weather_blocks">
+                <div class="temperature_block">
+                    <h2 class="section_heading temperature_heading">Temperature</h2>
+                    <p class="temp">20°C</p>
+                    
+                </div>
+                
+                <div class="time_location_block">
+                    <h2 class="section_heading time_location_heading">Time & Location</h2>
+                    <p class="location">Delhi</p>
+                    <span class="date">12:58 - Monday 2022-09-26</span>
+                </div>
+                <div class="condition_block">
+                    <h2 class="section_heading condition_heading">Condition</h2>
+                    <p class="condition">Mist</p>
+                </div>
+                <div class="windspeed-block">
+                    <h2 class="section_heading windspeed-heading">Windspeed(kph)</h2>
+                    <p class="windspeed">20</p>
+                </div>
+                <div class="icon_block">
+                    <h2 class="section_heading icon_heading">Weather Icon</h2>
+                    <img class="weather_icon" src="" alt="Weather Icon">
+                </div>
+                <!-- Error Message Block -->
+                <div class="error_message_block">
+                    <p class="error_message">City not found. Please try another location.</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <form id="searchForm">
+                <input type="text" placeholder="Search for a location" class="search_area" id="searchField"/>
+                <button type="submit" class="search_button">Search</button>
+            </form>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
